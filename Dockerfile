@@ -6,6 +6,10 @@ USER fsc
 
 COPY docker-entrypoint.sh /home/fsc/entrypoint.sh
 COPY fsc_node.jar /home/fsc/fsc_node.jar
-ENTRYPOINT ["/home/fsc/entrypoint.sh"]
+
+RUN chmod +x /home/fsc/entrypoint.sh
+RUN chmod +x /home/fsc/fsc_node.jar
 
 EXPOSE 8332 8333 18332 18333
+
+CMD "/home/fsc/entrypoint.sh"
