@@ -15,6 +15,7 @@ services:
       - 44557:44557
     volumes:
       - fsc-testnet-data:/home/fsc/bc
+    restart: unless-stopped
 
 networks:
   crypto-p2p-services:
