@@ -1,4 +1,4 @@
-FROM openjdk:8-jre-alpine
+FROM openjdk:latest
 
 RUN addgroup -S fsc && adduser -S fsc -G fsc
 
