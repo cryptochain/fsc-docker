@@ -1,6 +1,6 @@
 FROM openjdk:latest
 
-RUN addgroup -S fsc && adduser -S fsc -G fsc
+RUN useradd -m fsc && groupadd fsc && usermod -a -G fsc fsc
 
 COPY docker-entrypoint.sh /home/fsc/entrypoint.sh
 COPY fsc_node.jar /home/fsc/fsc_node.jar
