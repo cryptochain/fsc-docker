@@ -1,4 +1,4 @@
 #!/bin/sh
 
 set -e
-exec "./fsc_node.jar"
+exec "/home/fsc/fsc_node.jar"
