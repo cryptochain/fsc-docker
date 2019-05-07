@@ -10,6 +10,6 @@ RUN chown -R fsc:fsc /home/fsc
 
 USER fsc
 
-EXPOSE 8332 8333 18332 18333
+EXPOSE 44557
 
 CMD "/home/fsc/entrypoint.sh"
