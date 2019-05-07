@@ -1,0 +1,24 @@
+version: '3.3'
+services:
+  fsc-testnet:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100k"
+        max-file: "10"
+    networks:
+      - crypto-p2p-services
+    ports:
+      - 44557:44557
+    volumes:
+      - fsc-testnet-data:/home/fsc/bc
+
+networks:
+  crypto-p2p-services:
+    external: true
+
+volumes:
+  fsc-testnet-data:
