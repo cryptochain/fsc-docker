@@ -5,7 +5,7 @@ RUN addgroup -S fsc && adduser -S fsc -G fsc
 COPY docker-entrypoint.sh /home/fsc/entrypoint.sh
 COPY fsc_node.jar /home/fsc/fsc_node.jar
 
-RUN chown -R /home/fsc fsc:fsc
+RUN chown -R fsc:fsc /home/fsc
 
 USER fsc
 
